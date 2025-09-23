@@ -1,0 +1,19 @@
+<!--Possibilité d'ajouter un employé-->
+<div class="ajout">
+  <p class="text"><strong>Vous avez la possibilté d'ajouter un employee</strong></p>
+
+  <button (click)="addEmployee()">➕ Ajouter</button>
+</div>
+
+<!--la liste des employés-->
+<h2>Liste des employés</h2>
+<div class="employee-list">
+  @if (employees.length === 0) {
+    <strong>Aucun employé trouvé.</strong>
+  } @else {
+    <p><strong>Nombre d'employés : {{ employees.length }}</strong></p>
+    @for (employee of employees; track employee.id) {
+      <app-employee [employee]="employee"></app-employee>
+    }
+  }
+</div>

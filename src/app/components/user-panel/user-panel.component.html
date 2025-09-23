@@ -1,0 +1,14 @@
+<div class="overlay" (click)="onClose()"></div>
+
+<div class="panel open">
+  <header class="panel-header">
+    <h3>Bienvenue, {{ user?.firstName }} {{ user?.lastName }}</h3>
+    <button class="close-btn" (click)="onClose()">✖</button>
+  </header>
+
+  <ul class="panel-menu">
+    <li><button>👤 Mon profil</button></li>
+    <li><button>⚙️ Paramètres</button></li>
+    <li><button (click)="logout()">🚪 Déconnexion</button></li>
+  </ul>
+</div>

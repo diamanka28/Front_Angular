@@ -1,0 +1,9 @@
+<div class="employee-card">
+    <p><strong>{{employee.firstName}} {{employee.lastName}}</strong></p>
+    <p>{{ employee.mail }}</p>
+    <div class="actions">
+        <button (click)="editEmployee()">✏ Modifier</button>
+        <button (click)="deleteEmployee(employee.id)">🗑 Supprimer</button>
+    </div>
+   
+</div>

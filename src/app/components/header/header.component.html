@@ -1,0 +1,28 @@
+<header class="app-header">
+    <div class="header-content">
+        <a class="logo-title" routerLink="">
+            <img src="assets/logo.webp" alt="Logo" height="80">
+            <p>Gestion des Employés</p>
+        </a>
+
+        <nav class="navigation">
+            <ul class="navlist">
+                <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a></li>
+                <li><a routerLink="employees" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Employés</a></li>
+                <li><a routerLink="employees/add" routerLinkActive="active">À propos</a></li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <button>🔍 Rechercher</button>
+            @if(isLoggedIn()){
+                <button (click)="togglePanel()" style="color: white; text-decoration: solid;">Bienvenue, 
+                    {{ getUser().firstName | uppercase}} {{ getUser().lastName | uppercase }}
+                </button>
+            }@else{
+                <button routerLink="auth">🚪Connexion</button>
+            }
+        </div>
+    </div>
+</header>
+
+<app-user-panel  [user]="getUser()" (close)="togglePanel()" *ngIf="getShowPanel()"></app-user-panel>
