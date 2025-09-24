@@ -1,11 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Employee, EmployeeService } from '../../services/employee.service';
 import { Route, Router } from '@angular/router';
+import { LowerCasePipe, TitleCasePipe, UpperCasePipe } from '@angular/common';
 
 @Component({
   selector: 'app-employee',
   standalone : true,
-  imports: [],
+  imports: [
+    UpperCasePipe,
+    TitleCasePipe,
+    LowerCasePipe
+  ],
   templateUrl: './employee.component.html',
   styleUrl: './employee.component.scss'
 })
