@@ -22,7 +22,7 @@ export class AuthComponent {
   constructor(private authService: AuthService, private route: Router) { }
 
   onSubmit(): void {
-    console.log('Form submitted with', this.mail, this.password);
+    console.log('Form submitted with :', this.mail, this.password);
     this.authService.login(this.mail, this.password).subscribe({
       next: (response: any) => {
         console.log('Login successful', response);
