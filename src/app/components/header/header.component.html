@@ -7,8 +7,13 @@
       <p>Gestion des Employés</p>
     </a>
 
+    <!-- Bouton burger (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <!-- Menu de navigation -->
-    <nav class="navigation">
+    <nav class="navigation" id="mainNavbar">
       <ul class="navlist">
         <li>
           <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Accueil</a>
