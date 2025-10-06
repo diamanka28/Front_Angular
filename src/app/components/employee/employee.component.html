@@ -1,9 +1,11 @@
-<div class="employee-card">
-    <p><strong>{{employee.firstName | titlecase }} {{employee.lastName | uppercase}}</strong></p>
-    <p>{{ employee.mail | lowercase}}</p>
-    <div class="actions">
-        <button (click)="editEmployee()">✏ Modifier</button>
-        <button (click)="deleteEmployee(employee.id)">🗑 Supprimer</button>
+<div class="container">
+    <div class="employee-card">
+        <p><strong>{{employee.firstName | titlecase }} {{employee.lastName | uppercase}}</strong></p>
+        <p>{{ employee.mail | lowercase}}</p>
+        <div class="actions">
+            <button (click)="editEmployee()" class="col-lg-6 col-md-4 col-sm-3">✏ Modifier</button>
+            <button (click)="deleteEmployee(employee.id)">🗑 Supprimer</button>
+        </div>
     </div>
-   
 </div>
+
