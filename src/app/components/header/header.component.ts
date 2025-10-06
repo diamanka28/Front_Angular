@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 import { Employee } from '../../services/employee.service';
 import { UserPanelComponent } from '../user-panel/user-panel.component';
 import { CommonModule, UpperCasePipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-header',
@@ -13,7 +14,8 @@ import { CommonModule, UpperCasePipe } from '@angular/common';
     RouterLinkActive,
     UserPanelComponent,
     CommonModule,
-    UpperCasePipe
+    UpperCasePipe,
+    FormsModule
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
