@@ -21,6 +21,21 @@ import { CommonModule, UpperCasePipe } from '@angular/common';
 export class HeaderComponent {
   
   private showPanel: boolean = false;
+  showSearch = false;
+  searchTerm = '';
+
+  toggleSearch() {
+    this.showSearch = !this.showSearch;
+  }
+
+  onSearch() {
+    console.log('Recherche :', this.searchTerm);
+    // Ici, tu peux appeler un service ou filtrer une liste d'employés, ex :
+    // this.filteredEmployees = this.employees.filter(e =>
+    //   e.firstName.toLowerCase().includes(this.searchTerm.toLowerCase())
+    // );
+  }
+
 
   togglePanel(): void{
     this.showPanel = !this.showPanel;
