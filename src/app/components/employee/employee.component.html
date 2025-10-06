@@ -3,8 +3,8 @@
             <p><strong>{{employee.firstName | titlecase }} {{employee.lastName | uppercase}}</strong></p>
             <p>{{ employee.mail | lowercase}}</p>
             <div class="actions">
-                <button (click)="editEmployee()" class="col-3">✏ Modifier</button>
-                <button (click)="deleteEmployee(employee.id)" class="col-3">🗑 Supprimer</button>
+                <button (click)="editEmployee()" class="col-md-3 col-lg-2 col-sm-4">✏ Modifier</button>
+                <button (click)="deleteEmployee(employee.id)" class="col-md-3 col-lg-2 col-sm-4">🗑 Supprimer</button>
             </div>
         </div>
 </div>
