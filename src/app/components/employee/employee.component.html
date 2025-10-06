@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="col-lg-6 col-md-8 col-sm-12 mx-auto">
         <div class="employee-card">
             <p><strong>{{employee.firstName | titlecase }} {{employee.lastName | uppercase}}</strong></p>
             <p>{{ employee.mail | lowercase}}</p>
@@ -7,5 +8,7 @@
                 <button (click)="deleteEmployee(employee.id)" class="col-md-3 col-lg-2 col-sm-4">🗑 Supprimer</button>
             </div>
         </div>
+    </div>
+        
 </div>
 
