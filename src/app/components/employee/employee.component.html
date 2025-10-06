@@ -12,7 +12,7 @@
           <p class="card-text text-muted mb-3">{{ employee.mail | lowercase }}</p>
 
           <div class="d-flex justify-content-center gap-2">
-            <button class="btn btn-primary btn-sm" (click)="editEmployee(employee)">
+            <button class="btn btn-primary btn-sm" (click)="editEmployee()">
               ✏ Modifier
             </button>
             <button class="btn btn-danger btn-sm" (click)="deleteEmployee(employee.id)">
