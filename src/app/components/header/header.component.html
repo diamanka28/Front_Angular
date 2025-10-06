@@ -1,13 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
+<nav class="navbar navbar-expand-lg navbar-dark app-navbar">
   <div class="container-fluid">
 
     <!-- LOGO + TITRE -->
     <a class="navbar-brand d-flex align-items-center" routerLink="">
-      <img src="assets/logo.webp" alt="Logo" height="50" class="me-2">
-      <span class="fw-bold text-dark">Gestion des Employés</span>
+      <img src="assets/logo.webp" alt="Logo" height="50" class="me-2" />
+      <span class="fw-semibold">Gestion des Employés</span>
     </a>
 
-    <!-- BOUTON BURGER (mobile) -->
+    <!-- MENU BURGER (mobile) -->
     <button
       class="navbar-toggler"
       type="button"
@@ -20,7 +20,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- MENU ET ACTIONS -->
+    <!-- MENU + ACTIONS -->
     <div class="collapse navbar-collapse" id="mainNavbar">
 
       <!-- MENU CENTRÉ -->
@@ -30,37 +30,42 @@
             class="nav-link"
             routerLink=""
             routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}"
-          >Accueil</a>
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Accueil</a
+          >
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="employees"
             routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}"
-          >Employés</a>
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Employés</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="employees/add" routerLinkActive="active">À propos</a>
+          <a class="nav-link" routerLink="employees/add" routerLinkActive="active"
+            >À propos</a
+          >
         </li>
       </ul>
 
-      <!-- ACTIONS (à droite) -->
+      <!-- ACTIONS (droite) -->
       <div class="d-flex align-items-center gap-2">
-        <button class="btn btn-outline-dark">🔍 Rechercher</button>
+        <button class="btn btn-outline-light">🔍 Rechercher</button>
 
         @if (isLoggedIn()) {
-          <button class="btn btn-primary" (click)="togglePanel()">
+          <button class="btn btn-light text-primary fw-semibold" (click)="togglePanel()">
             Bienvenue,
             {{ getUser().firstName | uppercase }}
             {{ getUser().lastName | uppercase }}
           </button>
         } @else {
-          <button class="btn btn-success" routerLink="auth">🚪 Connexion</button>
+          <button class="btn btn-light fw-semibold" routerLink="auth">
+            🚪 Connexion
+          </button>
         }
       </div>
-
     </div>
   </div>
 </nav>
